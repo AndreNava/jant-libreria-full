@@ -1,10 +1,6 @@
 {
     "rewrites": [
         {
-            "source": "/(.*)",
-            "destination": "/"
-        },
-        {
             "source": "/api/:path*",
             "destination": "https://libreria-backend-products-production.up.railway.app/:path*"
         },
