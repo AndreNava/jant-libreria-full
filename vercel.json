@@ -3,6 +3,14 @@
         {
             "source": "/(.*)",
             "destination": "/"
+        },
+        {
+            "source": "/api/:path*",
+            "destination": "https://libreria-backend-products-production.up.railway.app/:path*"
+        },
+        {
+            "source": "/rentals/:path*",
+            "destination": "https://libreria-backend-rented-production.up.railway.app/:path*"
         }
     ]
 }
