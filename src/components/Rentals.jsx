@@ -18,7 +18,7 @@ export default function Rentals({ rentedBooks, setRentedBooks }) {
   useEffect(() => {
     const fetchRentedBooks = async () => {
       try {
-        const response = await fetch("https://libreria-backend-rented-production.up.railway.app/order-products");
+        const response = await fetch("/rentals/order-products");
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }

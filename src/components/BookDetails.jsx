@@ -58,7 +58,7 @@ export default function BookDetails({ rentedBooks, setRentedBooks, books }) {
 
     setRentedBooks((prevRentedBooks) => [...prevRentedBooks, rentedBookData]);
 
-    fetch("https://libreria-backend-rented-production.up.railway.app/order-products", {
+    fetch("/rentals/order-products", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
