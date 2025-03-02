@@ -21,7 +21,7 @@ const App = () => {
   useEffect(() => {
   const fetchBooks = async () => {
     try {
-      const response = await fetch("/api/products");
+      const response = await fetch("https://libreria-backend-products-production.up.railway.app/products");
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }

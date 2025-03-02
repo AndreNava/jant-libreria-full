@@ -22,7 +22,7 @@ export default function BookDetails({ rentedBooks, setRentedBooks, books }) {
   useEffect(() => {
     const fetchRentedBooks = async () => {
       try {
-        const response = await fetch("/rentals/order-products");
+        const response = await fetch("https://libreria-backend-rented-production.up.railway.app/order-products");
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -58,7 +58,7 @@ export default function BookDetails({ rentedBooks, setRentedBooks, books }) {
 
     setRentedBooks((prevRentedBooks) => [...prevRentedBooks, rentedBookData]);
 
-    fetch("/rentals/order-products", {
+    fetch("https://libreria-backend-rented-production.up.railway.app/order-products", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
